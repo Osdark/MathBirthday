@@ -12,7 +12,7 @@ export class DatePickerComponent {
   now = new Date();
   diffDay = 0;
   private MsPerDay = 1000*60*60*24;
-  private daysRemaining = 0;
+  daysRemaining = 0;
 
   constructor() { }
 
