@@ -1,0 +1,16 @@
+<div class="date-picker">
+  <p class="title">
+    <strong>Enter your birth date</strong>
+  </p>
+  <br>
+  <mat-form-field color="accent" appearance="standard">
+    <input matInput [max]=now [matDatepicker]="picker" (dateChange)=getDiffDay($event) disabled>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker disabled="false" touchUi></mat-datepicker>
+  </mat-form-field>
+</div>
+<div *ngIf=diffDay class="description">
+  Your next math birthday is  
+  <br>your <strong>{{mathBirthday}}-day-old birthday</strong>
+  <br>on: <strong>{{getMathBirthday()   | date:'MMM-dd-yyyy'}}</strong>
+</div>
