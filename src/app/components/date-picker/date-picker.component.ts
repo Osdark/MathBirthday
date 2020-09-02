@@ -13,6 +13,7 @@ export class DatePickerComponent {
   diffDay = 0;
   private MsPerDay = 1000*60*60*24;
   daysRemaining = 0;
+  showDescription = false;
 
   constructor() { }
 
@@ -20,6 +21,7 @@ export class DatePickerComponent {
     this.diffDay = Math.floor((this.now.getTime() - date.value.getTime())/this.MsPerDay);
     this.mathBirthday = this.get10n(this.diffDay);
     this.daysRemaining = this.mathBirthday - this.diffDay;
+    this.showDescription = this.daysRemaining > 0;
   }
 
   get10n(diffDay: number): number {

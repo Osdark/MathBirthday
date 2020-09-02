@@ -9,7 +9,7 @@
     <mat-datepicker #picker disabled="false" touchUi></mat-datepicker>
   </mat-form-field>
 </div>
-<div *ngIf=diffDay class="description">
+<div *ngIf=showDescription class="description">
   Your next math birthday is  
   <br>your <strong>{{mathBirthday}}-day-old birthday</strong>
   <br>on: <strong>{{getMathBirthday()   | date:'MMM-dd-yyyy'}}</strong>
